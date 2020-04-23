@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_5sdp"
+            android:background="@drawable/bg_border"
+            android:drawableStart="@drawable/vc_search"
+            android:drawableLeft="@drawable/vc_search"
+            android:drawablePadding="@dimen/_8sdp"
+            android:hint="@string/search"
+            android:imeOptions="actionDone"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:padding="@dimen/_8sdp"
+            android:singleLine="true"
+            android:textSize="12sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_below="@+id/etSearch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fadeScrollbars="false"
+            android:scrollbarSize="@dimen/_10sdp"
+            android:visibility="visible"
+            app:bubbleColor="@color/colorBlack"
+            app:bubbleTextColor="#ffffff"
+            app:handleColor="#999999" />
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <fragment
+                android:id="@+id/mapMainLandScape"
+                class="com.sindhuja.utils.TouchSupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
